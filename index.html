@@ -10,17 +10,23 @@
 </head>
 
 <body>
-    <nav>
+    <header>
         <img class="encryptor-logo" src="./img/coffee-cup.svg" alt="Text encryptor logo">
         <h1>Text Encryptor Challenge</h1>
-    </nav>
+    </header>
     <main>
         <section class="encryptor">
             <textarea id="encryptor-text" class="encryptor-text" cols="30" rows="10"
                 placeholder="Enter your text here..."></textarea>
             <div class="encryptor-btn-area">
-                <div class="encryptor-instructions"><p>Only lower case letters with no diacritic marks.</p></div>
-                <input class="encryptor-button" type="button" value="Encrypt">
+                <button class="encryptor-button" type="button">Encrypt</button>
+            </div>
+        </section>
+        <section class="decryptor">
+            <textarea id="decryptor-text" class="decryptor-text" cols="30" rows="10"
+                placeholder="Enter your text here..."></textarea>
+            <div class="decryptor-btn-area">
+                <button class="decryptor-button" type="button">Encrypt</button>
             </div>
         </section>
     </main>
