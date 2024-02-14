@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Lucida Console";
+  src: url("../fonts/LUCON.TTF");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Console", monospace;
+  background-color: #000;
+}
+
+header {
+  padding: 32px;
+  display: flex;
+  column-gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.encryptor-logo {
+  width: 80px;
+  height: auto;
+}
+
+h1 {
+  font-size: 32px;
+  color: #12a50b;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.encryptor,
+.decryptor {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ffffff;
+}
+
+.encryptor-text,
+.decryptor-text {
+  background-color: #000;
+  color: #f49206;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  resize: none;
+}
+
+.encryptor-text::placeholder,
+.decryptor-text::placeholder {
+  color: rgba(244, 146, 6, 0.5);
+}
+
+.encryptor-btn-area,
+.decryptor-btn-area {
+  display: flex;
+  justify-content: center;
+}
+
+.encryptor-button,
+.decryptor-button {
+  font-family: "Lucida Console", monospace;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+}
+
+.encryptor-button {
+  background-color: #1af110;
+}
+
+.decryptor-button {
+  background-color: #E60EF1;
+}
