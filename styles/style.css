@@ -89,13 +89,14 @@ h1 {
 .advice-box {
   display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: 8px;
   margin-bottom: 15px;
 }
 
 .advice-text {
   color: #1af110;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 /* div para centrar el boton mientras mantiene la proporcion */
