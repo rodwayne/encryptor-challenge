@@ -38,9 +38,10 @@ h1 {
   justify-content: space-around;
   max-width: 1400px;
   width: 100%;
-  /* height: fit-content; */
+  max-height: fit-content;
   margin: 0 auto;
   flex: 1;
+  padding: 25px 0;
 }
 
 .enter-message-area,
@@ -49,10 +50,12 @@ h1 {
   flex-direction: column;
   max-width: 600px;
   width: 100%;
-  height: fit-content;
-  max-height: 100%;
+  /* height: fit-content;
+  max-height: 100%; */
   padding: 15px;
-  border: 1px solid #ffffff;
+  box-shadow: #1af110;
+  /* border: 1px solid #ffffff; */
+  /* background-color: #242424; */
 }
 
 .enter-message-text,
@@ -63,15 +66,40 @@ h1 {
   border: none;
   font-size: 18px;
   resize: none;
+  /* background-color: transparent; */
+  flex: 1;
 }
 
-.enter-message-text::placeholder,
+.enter-message-text::placeholder {
+  color: #f49206;
+}
+
+/* .enter-message-text::placeholder, */
 .show-message-text::placeholder {
-  color: rgba(244, 146, 6, 0.5);
+  color: rgba(57, 182, 255, 0.5);
 }
 
 .enter-message-btn-area,
 .show-message-btn-area {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.advice-box {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 15px;
+}
+
+.advice-text {
+  color: #1af110;
+  font-size: 14px;
+}
+
+/* div para centrar el boton mientras mantiene la proporcion */
+.enter-message-btn-area div:last-child {
   display: flex;
   justify-content: center;
 }
