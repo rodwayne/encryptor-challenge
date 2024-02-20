@@ -7,11 +7,12 @@
     <title>Text Encryptor Challenge</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./img/coffee-cup.svg" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <img class="encryptor-logo" src="./img/coffee-cup.svg" alt="Text encryptor logo">
+        <!-- <img class="encryptor-logo" src="./img/coffee-cup.svg" alt="Text encryptor logo"> -->
         <h1>Text Encryptor Challenge</h1>
     </header>
     <main class="encryptor-decryptor">
@@ -19,7 +20,13 @@
             <textarea id="enter-message-text" class="enter-message-text" cols="30" rows="10"
                 placeholder="Enter your text here..."></textarea>
             <div class="enter-message-btn-area">
-                <button class="message-button" type="button">Encrypt</button>
+                <div class="advice-box">
+                    <img class="advice-icon" src="./img/alert.svg" alt="Advice icon">
+                    <p class="advice-text">Only enter lower case letters with no diacritic marks</p>
+                </div>
+                <div>
+                    <button class="message-button" type="button">Encrypt</button>
+                </div>
             </div>
         </section>
         <section class="show-message-area">
