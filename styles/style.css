@@ -10,6 +10,9 @@
 body {
   font-family: "Lucida Console", monospace;
   background-color: #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -30,26 +33,30 @@ h1 {
   color: #12a50b;
 }
 
-main {
+.encryptor-decryptor {
   display: flex;
   justify-content: space-around;
   max-width: 1400px;
   width: 100%;
+  /* height: fit-content; */
   margin: 0 auto;
+  flex: 1;
 }
 
-.encryptor,
-.decryptor {
+.enter-message-area,
+.show-message-area {
   display: flex;
   flex-direction: column;
   max-width: 600px;
   width: 100%;
+  height: fit-content;
+  max-height: 100%;
   padding: 15px;
   border: 1px solid #ffffff;
 }
 
-.encryptor-text,
-.decryptor-text {
+.enter-message-text,
+.show-message-text {
   background-color: #000;
   color: #f49206;
   outline: none;
@@ -58,19 +65,19 @@ main {
   resize: none;
 }
 
-.encryptor-text::placeholder,
-.decryptor-text::placeholder {
+.enter-message-text::placeholder,
+.show-message-text::placeholder {
   color: rgba(244, 146, 6, 0.5);
 }
 
-.encryptor-btn-area,
-.decryptor-btn-area {
+.enter-message-btn-area,
+.show-message-btn-area {
   display: flex;
   justify-content: center;
 }
 
-.encryptor-button,
-.decryptor-button {
+.message-button,
+.copy-button {
   font-family: "Lucida Console", monospace;
   font-size: 24px;
   border: none;
@@ -78,10 +85,21 @@ main {
   padding: 8px 20px;
 }
 
-.encryptor-button {
+.message-button {
   background-color: #1af110;
 }
 
-.decryptor-button {
-  background-color: #E60EF1;
+.copy-button {
+  background-color: #e60ef1;
+}
+
+footer {
+  background-color: #242424;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: rgb(0, 102, 255);
 }
