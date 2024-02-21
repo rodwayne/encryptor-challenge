@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  padding: 32px;
+  padding: 16px;
   display: flex;
   column-gap: 15px;
   justify-content: center;
@@ -36,9 +36,9 @@ h1 {
 .encryptor-decryptor {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   max-width: 1400px;
   width: 100%;
-  max-height: fit-content;
   margin: 0 auto;
   flex: 1;
   padding: 25px 0;
@@ -50,12 +50,10 @@ h1 {
   flex-direction: column;
   max-width: 600px;
   width: 100%;
-  /* height: fit-content;
-  max-height: 100%; */
   padding: 15px;
-  box-shadow: #1af110;
-  /* border: 1px solid #ffffff; */
-  /* background-color: #242424; */
+  margin: 0 30px;
+  box-shadow: 1px 1px 5px 5px #1af110;
+  border-radius: 5px;
 }
 
 .enter-message-text,
@@ -66,7 +64,6 @@ h1 {
   border: none;
   font-size: 18px;
   resize: none;
-  /* background-color: transparent; */
   flex: 1;
 }
 
@@ -100,7 +97,7 @@ h1 {
 }
 
 /* div para centrar el boton mientras mantiene la proporcion */
-.enter-message-btn-area div:last-child {
+.enter-message-btn-area div:last-child, .show-message-btn-area div {
   display: flex;
   justify-content: center;
 }
@@ -131,4 +128,12 @@ footer {
 
 footer a {
   color: rgb(0, 102, 255);
+}
+
+/* For tablet screen */
+@media screen and (max-width: 1319px) {
+  .enter-message-area, .show-message-area {
+    height: 400px;
+    margin: auto;
+  }
 }
