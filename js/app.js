@@ -36,6 +36,12 @@ function encryptMessage() {
   return;
 }
 
+function decryptMessage() {}
+
+function changeMode() {
+  alert("Change mode button has been clicked");
+}
+
 function copyMessage() {
   let messageElement = document.getElementById("show-message-text");
 
@@ -43,6 +49,4 @@ function copyMessage() {
   navigator.clipboard.writeText(messageElement.value);
 
   alert(`Copied text:\n${messageElement.value}`);
-
-  // console.log(messageText);
 }
