@@ -95,9 +95,16 @@ h1 {
 }
 
 /* div para centrar el boton mientras mantiene la proporcion */
-.enter-message-btn-area div:last-child, .show-message-btn-area div {
+/* .enter-message-btn-area div:last-child, */
+ .enter-message-buttons,
+ .show-message-btn-area div {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.enter-message-buttons {
+  column-gap: 10px;
 }
 
 .action-button,
@@ -105,12 +112,25 @@ h1 {
   font-family: "Lucida Console", monospace;
   font-size: 24px;
   border: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   padding: 8px 20px;
 }
 
 .action-button {
   background-color: #1af110;
+}
+
+.change-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+}
+
+.change-btn-img {
+  height: 100%;
+  width: 100%;
 }
 
 .copy-button {

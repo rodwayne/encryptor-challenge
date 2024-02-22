@@ -12,7 +12,6 @@
 
 <body>
     <header>
-        <!-- <img class="encryptor-logo" src="./img/coffee-cup.svg" alt="Text encryptor logo"> -->
         <h1>Text Encryptor Challenge</h1>
     </header>
     <main class="encryptor-decryptor">
@@ -24,8 +23,10 @@
                     <img class="advice-icon" src="./img/alert.svg" alt="Advice icon">
                     <p class="advice-text">Only enter lower case letters with no diacritic marks</p>
                 </div>
-                <div>
+                <div class="enter-message-buttons">
                     <button class="action-button" type="button" onclick="encryptMessage()">Encrypt</button>
+                    <button class="change-btn" onclick="changeMode()"><img class="change-btn-img" src="./img/loop.png"
+                            alt="Change mode"></button>
                 </div>
             </div>
         </section>
@@ -34,7 +35,7 @@
                 placeholder="You have not entered a message yet..." disabled></textarea>
             <div class="show-message-btn-area">
                 <div>
-                    <button class="copy-button" type="button">Copy</button>
+                    <button class="copy-button" type="button" onclick="copyMessage()">Copy</button>
                 </div>
             </div>
         </section>
@@ -44,4 +45,5 @@
     </footer>
 </body>
 <script src="./js/app.js" defer></script>
+
 </html>
