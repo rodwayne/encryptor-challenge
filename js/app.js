@@ -37,5 +37,12 @@ function encryptMessage() {
 }
 
 function copyMessage() {
-  
+  let messageElement = document.getElementById("show-message-text");
+
+  messageElement.select();
+  navigator.clipboard.writeText(messageElement.value);
+
+  alert(`Copied text:\n${messageElement.value}`);
+
+  // console.log(messageText);
 }
