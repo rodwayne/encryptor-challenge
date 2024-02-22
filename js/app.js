@@ -36,10 +36,23 @@ function encryptMessage() {
   return;
 }
 
-function decryptMessage() {}
+function decryptMessage() {
+  alert("This button now decrypts messages");
+}
 
 function changeMode() {
-  alert("Change mode button has been clicked");
+  let encryptButton = document.querySelector(".action-button");
+  let mode = encryptButton.innerHTML.toLowerCase();
+
+  if (mode == "encrypt") {
+    encryptButton.innerHTML = "Decrypt";
+    encryptButton.setAttribute("onclick", "decryptMessage()");
+  } else {
+    encryptButton.innerHTML = "Encrypt";
+    encryptButton.setAttribute("onclick", "encryptMessage()");
+  }
+
+  return;
 }
 
 function copyMessage() {
