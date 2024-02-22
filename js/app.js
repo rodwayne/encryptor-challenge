@@ -1,8 +1,7 @@
 function encryptMessage() {
   let messageToEncrypt = document.getElementById("enter-message-text").value;
   let forbiddenCharacters = /[áéíóú\dA-Z]/gm;
-  //   let validCharacters = /[a-z]+/gm;
-  //   let charactersToEncrypt = /[aeiou]/gm;
+  let showMessage = document.getElementById("show-message-text");
   const encryptedMessage = [];
 
   if (forbiddenCharacters.test(messageToEncrypt)) {
@@ -31,6 +30,12 @@ function encryptMessage() {
     }
   }
 
-  console.log(encryptedMessage.join(''));
+  // Change text shown in decrypted message
+  console.log(encryptedMessage.join(""));
+  showMessage.innerHTML = encryptedMessage.join("");
+  return;
+}
 
+function copyMessage() {
+  
 }
