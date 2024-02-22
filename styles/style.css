@@ -13,14 +13,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  /* min-width: 373px; */
 }
 
 header {
   padding: 16px;
-  display: flex;
-  column-gap: 15px;
-  justify-content: center;
-  align-items: center;
 }
 
 .encryptor-logo {
@@ -31,6 +28,7 @@ header {
 h1 {
   font-size: 32px;
   color: #12a50b;
+  text-align: center;
 }
 
 .encryptor-decryptor {
@@ -52,7 +50,7 @@ h1 {
   width: 100%;
   padding: 15px;
   margin: 0 30px;
-  box-shadow: 1px 1px 5px 5px #1af110;
+  box-shadow: 1px 1px 5px 5px rgba(26, 241, 16, 0.3);
   border-radius: 5px;
 }
 
@@ -102,7 +100,7 @@ h1 {
   justify-content: center;
 }
 
-.message-button,
+.action-button,
 .copy-button {
   font-family: "Lucida Console", monospace;
   font-size: 24px;
@@ -111,7 +109,7 @@ h1 {
   padding: 8px 20px;
 }
 
-.message-button {
+.action-button {
   background-color: #1af110;
 }
 
@@ -136,4 +134,30 @@ footer a {
     height: 400px;
     margin: auto;
   }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  header {
+    padding: 15px 0 0 ;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .encryptor-decryptor {
+    padding-bottom: 0;
+    align-items: center;
+  }
+
+  .enter-message-area, .show-message-area {
+    width: 300px;
+    height: 320px;
+    margin: 0;
+  }
+
+  .action-button, .copy-button {
+    font-size: 22px;
+  }
+  
 }
