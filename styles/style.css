@@ -69,6 +69,10 @@ h1 {
   color: #f49206;
 }
 
+.show-message-text {
+  color: rgb(57, 182, 255);
+}
+
 /* .enter-message-text::placeholder, */
 .show-message-text::placeholder {
   color: rgba(57, 182, 255, 0.5);
@@ -96,8 +100,8 @@ h1 {
 
 /* div para centrar el boton mientras mantiene la proporcion */
 /* .enter-message-btn-area div:last-child, */
- .enter-message-buttons,
- .show-message-btn-area div {
+.enter-message-buttons,
+.show-message-btn-area div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,7 +154,8 @@ footer a {
 
 /* For tablet screen */
 @media screen and (max-width: 1319px) {
-  .enter-message-area, .show-message-area {
+  .enter-message-area,
+  .show-message-area {
     height: 400px;
     margin: auto;
   }
@@ -158,7 +163,7 @@ footer a {
 
 @media screen and (min-width: 300px) and (max-width: 500px) {
   header {
-    padding: 15px 0 0 ;
+    padding: 15px 0 0;
   }
 
   h1 {
@@ -170,14 +175,15 @@ footer a {
     align-items: center;
   }
 
-  .enter-message-area, .show-message-area {
+  .enter-message-area,
+  .show-message-area {
     width: 300px;
     height: 320px;
     margin: 0;
   }
 
-  .action-button, .copy-button {
+  .action-button,
+  .copy-button {
     font-size: 22px;
   }
-  
 }
