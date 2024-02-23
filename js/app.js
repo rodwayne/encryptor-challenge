@@ -1,6 +1,6 @@
 function encryptMessage() {
   let messageToEncrypt = document.getElementById("enter-message-text").value;
-  let forbiddenCharacters = /[áéíóú\dA-Z]/gm;
+  const forbiddenCharacters = /[^a-z\s]+/gm;
   let showMessage = document.getElementById("show-message-text");
   const encryptedMessage = [];
 
@@ -30,14 +30,48 @@ function encryptMessage() {
     }
   }
 
-  // Change text shown in decrypted message
-  console.log(encryptedMessage.join(""));
   showMessage.innerHTML = encryptedMessage.join("");
   return;
 }
 
+
 function decryptMessage() {
-  alert("This button now decrypts messages");
+  let messageToDecrypt = document.getElementById("enter-message-text").value;
+  const forbiddenCharacters = /[^a-z\s]+/gm;
+  const expressionsToDecrypt =
+    /ai|enter|imes|ober|ufat|[bcdfghjklmnpqrstvwxyz\s]/gm;
+  const words = messageToDecrypt.match(expressionsToDecrypt);
+  let showMessage = document.getElementById("show-message-text");
+  const decryptedMessage = [];
+
+  if (forbiddenCharacters.test(messageToDecrypt)) {
+    alert("Remove any non-valid characters");
+  } else {
+    for (let i = 0; i < words.length; i++) {
+      switch (words[i]) {
+        case "ai":
+          decryptedMessage.push("a");
+          break;
+        case "enter":
+          decryptedMessage.push("e");
+          break;
+        case "imes":
+          decryptedMessage.push("i");
+          break;
+        case "ober":
+          decryptedMessage.push("o");
+          break;
+        case "ufat":
+          decryptedMessage.push("u");
+          break;
+        default:
+          decryptedMessage.push(words[i]);
+          break;
+      }
+    }
+  }
+
+  showMessage.innerHTML = decryptedMessage.join("");
 }
 
 function changeMode() {
