@@ -4,8 +4,11 @@ function encryptMessage() {
   let showMessage = document.getElementById("show-message-text");
   const encryptedMessage = [];
 
+  removeNonValidAlert();
+
   if (forbiddenCharacters.test(messageToEncrypt)) {
-    alert("Remove any non-valid characters");
+    // alert("Remove any non-valid characters");
+    addNonValidAlert();
   } else {
     for (let i = 0; i < messageToEncrypt.length; i++) {
       switch (messageToEncrypt[i]) {
@@ -34,7 +37,6 @@ function encryptMessage() {
   return;
 }
 
-
 function decryptMessage() {
   let messageToDecrypt = document.getElementById("enter-message-text").value;
   const forbiddenCharacters = /[^a-z\s]+/gm;
@@ -44,8 +46,10 @@ function decryptMessage() {
   let showMessage = document.getElementById("show-message-text");
   const decryptedMessage = [];
 
+  removeNonValidAlert();
+
   if (forbiddenCharacters.test(messageToDecrypt)) {
-    alert("Remove any non-valid characters");
+    addNonValidAlert();
   } else {
     for (let i = 0; i < words.length; i++) {
       switch (words[i]) {
@@ -96,4 +100,15 @@ function copyMessage() {
   navigator.clipboard.writeText(messageElement.value);
 
   alert(`Copied text:\n${messageElement.value}`);
+}
+
+function addNonValidAlert() {
+  const adviceBox = document.querySelector(".advice-box");
+  adviceBox.classList.add("shake-animation");
+}
+
+function removeNonValidAlert() {
+  const adviceBox = document.querySelector(".advice-box");
+  adviceBox.classList.remove("shake-animation");
+  void adviceBox.offsetWidth;
 }

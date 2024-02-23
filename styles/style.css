@@ -152,6 +152,19 @@ footer a {
   color: rgb(0, 102, 255);
 }
 
+.shake-animation {
+  animation: shake 0.5s ease-in-out 5 alternate;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
 /* For tablet screen */
 @media screen and (max-width: 1319px) {
   .enter-message-area,
