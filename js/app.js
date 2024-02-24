@@ -92,7 +92,7 @@ function changeMode() {
   } else {
     encryptButton.innerHTML = "Encrypt";
     encryptButton.setAttribute("onclick", "encryptMessage()");
-    enterMessage.removeAttribute("style");
+    // enterMessage.removeAttribute("style");
     enterMessageChange.classList.remove("enter-message-change");
     showMessageChange.classList.remove("show-message-change");
   }
@@ -102,11 +102,18 @@ function changeMode() {
 
 function copyMessage() {
   let messageElement = document.getElementById("show-message-text");
+  let copiedMessage = document.querySelector(".copied-message-text");
 
   messageElement.select();
   navigator.clipboard.writeText(messageElement.value);
 
-  alert(`Copied text:\n${messageElement.value}`);
+  copiedMessage.classList.contains("fade-animation")
+    ? copiedMessage.classList.remove("fade-animation")
+    : copiedMessage.classList.add("fade-animation");
+
+  setTimeout(() => {
+    copiedMessage.classList.remove("fade-animation");
+  }, 3000);
 }
 
 function addNonValidAlert() {
