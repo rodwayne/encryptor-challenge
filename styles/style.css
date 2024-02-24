@@ -252,6 +252,12 @@ footer a {
     font-size: 22px;
   }
 
+  .change-btn,
+  .erase-btn {
+    height: 28px;
+    width: 28px;
+  }
+
   .copied-message-text {
     right: 10px;
   }
