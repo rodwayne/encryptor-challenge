@@ -112,3 +112,11 @@ function removeNonValidAlert() {
   adviceBox.classList.remove("shake-animation");
   void adviceBox.offsetWidth;
 }
+
+function clearContent() {
+  let enterMessage = document.getElementById("enter-message-text");
+  let showMessage = document.getElementById("show-message-text");
+
+  enterMessage.value = "";
+  showMessage.innerHTML = "";
+}

@@ -116,7 +116,6 @@ h1 {
   font-family: "Lucida Console", monospace;
   font-size: 24px;
   border: none;
-  /* border-radius: 5px; */
   padding: 8px 20px;
 }
 
@@ -124,7 +123,7 @@ h1 {
   background-color: #1af110;
 }
 
-.change-btn {
+.change-btn, .erase-btn {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -132,7 +131,8 @@ h1 {
   height: 36px;
 }
 
-.change-btn-img {
+.change-btn-img,
+.erase-btn-img {
   height: 100%;
   width: 100%;
 }
