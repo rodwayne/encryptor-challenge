@@ -66,7 +66,15 @@ h1 {
 }
 
 .enter-message-text::placeholder {
-  color: #f49206;
+  color: rgba(244, 146, 6, 0.7);
+}
+
+.enter-message-change {
+  color: rgb(57, 182, 255);;
+}
+
+.enter-message-change::placeholder {
+  color: rgba(57, 182, 255, 0.5);
 }
 
 .show-message-text {
@@ -76,6 +84,14 @@ h1 {
 /* .enter-message-text::placeholder, */
 .show-message-text::placeholder {
   color: rgba(57, 182, 255, 0.5);
+}
+
+.show-message-change {
+  color: rgb(244, 146, 6);
+}
+
+.show-message-change::placeholder {
+  color: rgba(244, 146, 6, 0.7)
 }
 
 .enter-message-btn-area,

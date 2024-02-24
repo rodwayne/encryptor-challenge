@@ -7,7 +7,6 @@ function encryptMessage() {
   removeNonValidAlert();
 
   if (forbiddenCharacters.test(messageToEncrypt)) {
-    // alert("Remove any non-valid characters");
     addNonValidAlert();
   } else {
     for (let i = 0; i < messageToEncrypt.length; i++) {
@@ -81,13 +80,21 @@ function decryptMessage() {
 function changeMode() {
   let encryptButton = document.querySelector(".action-button");
   let mode = encryptButton.innerHTML.toLowerCase();
+  let enterMessage = document.getElementById("enter-message-text");
+  let enterMessageChange = document.querySelector(".enter-message-text");
+  let showMessageChange = document.querySelector(".show-message-text");
 
   if (mode == "encrypt") {
     encryptButton.innerHTML = "Decrypt";
     encryptButton.setAttribute("onclick", "decryptMessage()");
+    enterMessageChange.classList.add("enter-message-change");
+    showMessageChange.classList.add("show-message-change");
   } else {
     encryptButton.innerHTML = "Encrypt";
     encryptButton.setAttribute("onclick", "encryptMessage()");
+    enterMessage.removeAttribute("style");
+    enterMessageChange.classList.remove("enter-message-change");
+    showMessageChange.classList.remove("show-message-change");
   }
 
   return;
