@@ -17,7 +17,7 @@ body {
 }
 
 header {
-  padding: 16px;
+  padding: 16px 16px 0;
 }
 
 .encryptor-logo {
@@ -70,7 +70,7 @@ h1 {
 }
 
 .enter-message-change {
-  color: rgb(57, 182, 255);;
+  color: rgb(57, 182, 255);
 }
 
 .enter-message-change::placeholder {
@@ -91,7 +91,7 @@ h1 {
 }
 
 .show-message-change::placeholder {
-  color: rgba(244, 146, 6, 0.7)
+  color: rgba(244, 146, 6, 0.7);
 }
 
 .enter-message-btn-area,
@@ -133,13 +133,16 @@ h1 {
   font-size: 24px;
   border: none;
   padding: 8px 20px;
+  cursor: pointer;
 }
 
 .action-button {
   background-color: #1af110;
 }
 
-.change-btn, .erase-btn {
+.change-btn,
+.erase-btn {
+  cursor: pointer;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -153,8 +156,19 @@ h1 {
   width: 100%;
 }
 
+.show-message-buttons {
+  position: relative;
+}
+
 .copy-button {
   background-color: #e60ef1;
+}
+
+.copied-message-text {
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  right: 160px;
 }
 
 footer {
@@ -178,6 +192,28 @@ footer a {
   }
   100% {
     transform: translateX(5px);
+  }
+}
+
+.fade-animation {
+  animation: fade 3s ease-in;
+}
+
+@keyframes fade {
+  0% {
+    color: transparent;
+  }
+  25% {
+    color: #e60ef1;
+  }
+  50% {
+    color: #e60ef1;
+  }
+  75% {
+    color: #e60ef1;
+  }
+  100% {
+    color: transparent;
   }
 }
 
@@ -214,5 +250,9 @@ footer a {
   .action-button,
   .copy-button {
     font-size: 22px;
+  }
+
+  .copied-message-text {
+    right: 10px;
   }
 }
